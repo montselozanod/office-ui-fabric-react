@@ -75,6 +75,14 @@ export class GroupedList extends BaseComponent<IGroupedListProps, IGroupedListSt
     }
   }
 
+  public componentWillMount() {
+    const { groupProps } = this.props;
+
+    if (groupProps && groupProps.isAllGroupsCollapsed) {
+      this.toggleCollapseAll(groupProps.isAllGroupsCollapsed);
+    }
+  }
+
   public render() {
     let {
       className,

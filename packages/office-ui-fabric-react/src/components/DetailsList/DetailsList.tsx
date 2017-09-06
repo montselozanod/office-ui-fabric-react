@@ -182,6 +182,12 @@ export class DetailsList extends BaseComponent<IDetailsListProps, IDetailsListSt
     }
   }
 
+  public componentWillMount() {
+    if (this._groupedList && this.state.isCollapsed) {
+      this._groupedList.toggleCollapseAll(this.state.isCollapsed);
+    }
+  }
+
   public render() {
     let {
       ariaLabelForListHeader,
