@@ -61,7 +61,15 @@ export class ListPage extends React.Component<IComponentDemoPageProps, {}> {
             </p>
           </div>
         }
+<<<<<<< HEAD
         isHeaderVisible={ this.props.isHeaderVisible }>
+=======
+        related={
+          <a href='https://dev.office.com/fabric-js/Components/List/List.html'>Fabric JS</a>
+        }
+        isHeaderVisible={ this.props.isHeaderVisible }
+      >
+>>>>>>> origin/master
       </ComponentPage>
     );
   }

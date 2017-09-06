@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { autobind } from '../../../Utilities';
 import { TagPicker } from 'office-ui-fabric-react/lib/components/pickers/TagPicker/TagPicker';
 import { Checkbox } from 'office-ui-fabric-react/lib/Checkbox';
 import { ITagPickerDemoPageState } from 'office-ui-fabric-react/lib/components/pickers/examples/ITagPickerDemoPageState';
@@ -38,7 +39,8 @@ export class TagPickerBasicExample extends React.Component<{}, ITagPickerDemoPag
           label='Disable Tag Picker'
           checked={ this.state.isPickerDisabled }
           onChange={ this._onDisabledButtonClick.bind(this) } />
-        <TagPicker ref='tagPicker'
+        <TagPicker
+          ref='tagPicker'
           onResolveSuggestions={ this._onFilterChanged.bind(this) }
           getTextFromItem={ (item: any) => { return item.name; } }
           pickerSuggestionsProps={
@@ -59,12 +61,14 @@ export class TagPickerBasicExample extends React.Component<{}, ITagPickerDemoPag
     );
   }
 
+  @autobind
   private _onDisabledButtonClick(): void {
     this.setState({
       isPickerDisabled: !this.state.isPickerDisabled
     });
   }
 
+  @autobind
   private _onFilterChanged(filterText: string, tagList: { key: string, name: string }[]) {
     return filterText ? _testTags.filter(tag => tag.name.toLowerCase().indexOf(filterText.toLowerCase()) === 0).filter(item => !this._listContainsDocument(item, tagList)) : [];
   }

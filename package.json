@@ -24,5 +24,8 @@
   "license": "MIT",
   "devDependencies": {
     "@microsoft/rush": "3.0.12"
+  },
+  "dependencies": {
+    "npm": "^5.4.0"
   }
 }
