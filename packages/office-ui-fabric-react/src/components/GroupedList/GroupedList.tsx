@@ -54,6 +54,10 @@ export class GroupedList extends BaseComponent<IGroupedListProps, IGroupedListSt
     };
   }
 
+  public scrollToIndex(index: number, measureItem?: (itemIndex: number) => number): void {
+    this.refs.list && this.refs.list.scrollToIndex(index, measureItem);
+  }
+
   public componentWillReceiveProps(newProps: IGroupedListProps) {
     let {
       groups,
@@ -165,6 +169,7 @@ export class GroupedList extends BaseComponent<IGroupedListProps, IGroupedListSt
     };
 
     let headerProps = assign({}, groupProps!.headerProps, dividerProps);
+    let showAllProps = assign({}, groupProps!.showAllProps, dividerProps);
     let footerProps = assign({}, groupProps!.footerProps, dividerProps);
     let groupNestingDepth = this._getGroupNestingDepth();
 
@@ -189,9 +194,11 @@ export class GroupedList extends BaseComponent<IGroupedListProps, IGroupedListSt
         items={ items }
         onRenderCell={ onRenderCell }
         onRenderGroupHeader={ groupProps!.onRenderHeader }
+        onRenderGroupShowAll={ groupProps!.onRenderShowAll }
         onRenderGroupFooter={ groupProps!.onRenderFooter }
         selectionMode={ selectionMode }
         selection={ selection }
+        showAllProps={ showAllProps }
         viewport={ viewport }
       />
     );
@@ -262,7 +269,7 @@ export class GroupedList extends BaseComponent<IGroupedListProps, IGroupedListSt
   @autobind
   private _onToggleSummarize(group: IGroup) {
     let { groupProps } = this.props;
-    let onToggleSummarize = groupProps && groupProps.footerProps && groupProps.footerProps.onToggleSummarize;
+    let onToggleSummarize = groupProps && groupProps.showAllProps && groupProps.showAllProps.onToggleSummarize;
 
     if (onToggleSummarize) {
       onToggleSummarize(group);
