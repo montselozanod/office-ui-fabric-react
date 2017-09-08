@@ -18,6 +18,8 @@ $checkBoxHeight: 18px;
   display: flex;
   align-items: stretch;
   justify-content: center;
+  border-radius: 50%;
+  background: $ms-color-white;
 
   @include ms-user-select(none);
 
@@ -65,7 +67,6 @@ $checkBoxHeight: 18px;
 
 .rootIsChecked .check {
   color: $ms-color-white;
-  font-weight: 900;
 
   @media screen and (-ms-high-contrast: active) {
     border-radius: 9px;
