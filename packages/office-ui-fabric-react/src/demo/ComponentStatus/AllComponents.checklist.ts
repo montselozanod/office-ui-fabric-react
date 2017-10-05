@@ -1,7 +1,7 @@
 
-import { IComponentStatusProps } from './ComponentStatus.Props';
+import { IChecklistStatus } from './ComponentStatus.Props';
 export interface IComponentStatusState {
-  [key: string]: IComponentStatusProps;
+  [key: string]: IChecklistStatus;
 }
 export const AllComponentsStatus: IComponentStatusState = {
   Breadcrumb: require<any>('../../components/Breadcrumb/Breadcrumb.checklist').BreadcrumbStatus,

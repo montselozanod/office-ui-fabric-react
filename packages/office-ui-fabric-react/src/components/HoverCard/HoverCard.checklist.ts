@@ -1,6 +1,6 @@
-import { ChecklistStatus } from '../../demo/ComponentStatus/ComponentStatus.Props';
+import { IChecklistStatus, ChecklistStatus } from '../../demo/ComponentStatus/ComponentStatus.Props';
 
-export const HoverCardStatus = {
+export const HoverCardStatus: IChecklistStatus = {
   keyboardAccessibilitySupport: ChecklistStatus.unknown,
   markupSupport: ChecklistStatus.unknown,
   highContrastSupport: ChecklistStatus.fail,

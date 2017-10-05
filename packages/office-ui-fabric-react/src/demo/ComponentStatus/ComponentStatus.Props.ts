@@ -1,4 +1,4 @@
-export interface IComponentStatusProps {
+export interface IChecklistStatus {
   keyboardAccessibilitySupport: ChecklistStatus;
   markupSupport: ChecklistStatus;
   highContrastSupport: ChecklistStatus;
