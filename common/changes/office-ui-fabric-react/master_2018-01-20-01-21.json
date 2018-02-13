@@ -2,10 +2,10 @@
   "changes": [
     {
       "packageName": "office-ui-fabric-react",
-      "comment": "Callout/Positioning: Fixed a bug where callout would lose alignment for some hints in rtl",
+      "comment": "SpinButton: Add getClassNAmes prop to allow complete customization of the component",
       "type": "patch"
     }
   ],
   "packageName": "office-ui-fabric-react",
-  "email": "joschect@microsoft.com"
+  "email": "kysedate@microsoft.com"
 }
