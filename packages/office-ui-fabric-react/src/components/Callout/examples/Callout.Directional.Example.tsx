@@ -61,9 +61,9 @@ export class CalloutDirectionalExample extends React.Component<{}, ICalloutDirec
             onChange={ this._onShowBeakChange }
           />
           <Slider
-            max={ 30 }
+            max={ 33 }
             label='Gap Space'
-            min={ 0 }
+            min={ -10 }
             defaultValue={ 0 }
             onChange={ this._onGapSlider }
           />
