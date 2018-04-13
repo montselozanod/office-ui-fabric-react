@@ -20,7 +20,7 @@ exports[`Dropdown multi-select Renders multiselect Dropdown correctly 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    role="combobox"
+    role="listbox"
     tabIndex={0}
   >
     <span
@@ -28,14 +28,13 @@ exports[`Dropdown multi-select Renders multiselect Dropdown correctly 1`] = `
       aria-readonly="true"
       className="ms-Dropdown-title ms-Dropdown-titleIsPlaceHolder"
       id="Dropdown94-option"
-      role="textbox"
+      role="listbox"
     />
     <span
       className="ms-Dropdown-caretDownWrapper"
     >
       <i
         aria-hidden={true}
-        aria-label={undefined}
         className=
             ms-Dropdown-caretDown
             {
@@ -69,7 +68,7 @@ exports[`Dropdown single-select Renders single-select Dropdown correctly 1`] = `
     onClick={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
-    role="combobox"
+    role="listbox"
     tabIndex={0}
   >
     <span
@@ -77,14 +76,13 @@ exports[`Dropdown single-select Renders single-select Dropdown correctly 1`] = `
       aria-readonly="true"
       className="ms-Dropdown-title ms-Dropdown-titleIsPlaceHolder"
       id="Dropdown0-option"
-      role="textbox"
+      role="listbox"
     />
     <span
       className="ms-Dropdown-caretDownWrapper"
     >
       <i
         aria-hidden={true}
-        aria-label={undefined}
         className=
             ms-Dropdown-caretDown
             {

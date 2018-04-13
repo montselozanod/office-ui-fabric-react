@@ -14,7 +14,7 @@ export interface IDatePickerProps extends React.Props<DatePicker> {
    * Optional callback to access the IDatePicker interface. Use this instead of ref for accessing
    * the public methods and properties of the component.
    */
-  componentRef?: (component: IDatePicker) => void;
+  componentRef?: (component: IDatePicker | null) => void;
 
   /**
    * Pass calendar props to calendar component
@@ -170,6 +170,11 @@ export interface IDatePickerProps extends React.Props<DatePicker> {
    * The initially highlighted date in the calendar picker
    */
   initialPickerDate?: Date;
+
+  /**
+ * Callback that runs after DatePicker's menu (Calendar) is closed
+ */
+  onAfterMenuDismiss?: () => void;
 }
 
 export interface IDatePickerStrings {
